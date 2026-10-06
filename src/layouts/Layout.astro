@@ -1,0 +1,48 @@
+---
+/**
+- Layout principal para todas las páginas del sitio Minares South.
+- Proporciona la estructura base de HTML5, incluyendo meta etiquetas,
+- fuentes globales y componentes comunes como Navbar, Footer y TopHeader.
+ *
+- 
+- @property {string} titleEl título de la página que se mostrará en la pestaña del navegador.
+- 
+@author Rubén Tipiani
+ */
+import Navbar from "../components/Navbar";
+import TopHeader from "../components/TopHeader";
+import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
+import BrochureButton from "../components/BrochureButton";
+import "../styles/global.css";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="KOSMOS TEC. es un sistema de Gestión de Servicios para negocios que necesiten centralizar su informacion y garantizar la integridad de sus datos."
+        />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="author" content="KOSMOS TEC - SG" />
+        <title>{title}</title>
+    </head>
+    <body class="bg-slate-100 text-black">
+        <TopHeader client:load />
+        <Navbar client:load pathname={Astro.url.pathname} />
+        <slot />
+        <BrochureButton client:load />
+        <WhatsAppButton client:load />
+        <Footer client:visible />
+    </body>
+</html>

@@ -1,0 +1,209 @@
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faPhone, faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
+const locations = [
+    {
+        id: 1,
+        name: 'Lima',
+        image: '/images/lima_oficina.png',
+        address: 'Calle Marcos Farfan 3377 - Independencia',
+        phone: '+51 967 605 686',
+        email: 'recepcionlima@minaressouth.com',
+        whatsapp: '51967605686',
+        mapsUrl: 'https://maps.app.goo.gl/AZzcNncY4vjPVPjK7'
+    },
+    {
+        id: 2,
+        name: 'Nazca',
+        image: '/images/nazca_office.png',
+        address: 'Av. Panamericana Sur, Mz-K Lt-11A - Urb. Vista Alegre',
+        phone: '+51 986 635 088',
+        /**email: 'informesnasca@minares.com.pe',*/
+        whatsapp: '51986635088',
+        mapsUrl: 'https://maps.app.goo.gl/8MjkxjXq8r5iWw158'
+    },
+    {
+        id: 3,
+        name: 'Chala',
+        image: '/images/chala_office.png',
+        address: 'Km. 315 Panamericana Sur, Mz-36 Lt-11 - Anexo la Aguadita',
+        phone: '+51 986 635 086',
+        /**email: 'informeschala@minares.com.pe',*/
+        whatsapp: '51986635086',
+        mapsUrl: 'https://maps.app.goo.gl/SEjp3EEV1HWv7f2aA'
+    },
+    {
+        id: 4,
+        name: 'Relave',
+        image: '/images/relave_office.jpg',
+        address: 'Mz-T Lt-20 - Barrio Los Angeles',
+        phone: '+51 980 839 840',
+        /**email: 'informesrelave@gmail.com',*/
+        whatsapp: '51980839840',
+        mapsUrl: 'https://maps.app.goo.gl/ChGzJuppxv1gjSxo7'
+    },
+    {
+        id: 5,
+        name: 'Arequipa',
+        image: '/images/arequipa_office.png',
+        address: 'Parque Industrial de Río Seco, 1ra Etapa, Mz-C Lt-2 - Cerro Colorado',
+        phone: '+51 957 246 955',
+         /**email: 'informesarequipa2023@gmail.com',*/
+        whatsapp: '51957246955',
+        mapsUrl: 'https://maps.app.goo.gl/3FN7fr6oABfihT8h8'
+    },
+    {
+        id: 6,
+        name: 'Abancay',
+        image: '/images/abancay_oficina.png',
+        address: 'Av. Panamericana 145 - Abancay',
+        phone: '+51 914 966 623',
+        /**email: 'informesabancay@minares.com.pe',*/
+        whatsapp: '51914966623',
+        mapsUrl: 'https://maps.app.goo.gl/wcj4wRE6GpVwnJar5'
+    },
+    {
+        id: 7,
+        name: 'Juliaca',
+        image: '/images/juliaca_office.png',
+        address: 'Av Mártires 4 de Noviembre 1382',
+        phone: '+51 950 117 804',
+        /**email: 'informesabancay@minares.com.pe',*/
+        whatsapp: '51950117804',
+        mapsUrl: 'https://maps.app.goo.gl/e535HbJERuveGkH96'
+    },
+];
+
+/**
+ * Sección que muestra las diferentes sedes u oficinas de la empresa.
+ * Incluye imágenes, datos de contacto y enlaces a mapas y WhatsApp.
+ * Soporta interactividad mediante click en móvil y hover en desktop.
+ */
+const LocationsSection = () => {
+    const [activeLocationId, setActiveLocationId] = useState<number | null>(null);
+
+    const toggleLocation = (id: number) => {
+        if (activeLocationId === id) {
+            setActiveLocationId(null);
+        } else {
+            setActiveLocationId(id);
+        }
+    };
+
+    return (
+        <section className="bg-gray-50 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        NUESTRAS OFICINAS
+                    </h2>
+                    <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                        Presencia estratégica en los principales corredores mineros del país para atenderlo mejor.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-8">
+                    {locations.map((location) => {
+                        const isActive = activeLocationId === location.id;
+
+                        return (
+                            <div
+                                key={location.id}
+                                className="group relative h-96 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-default"
+                            >
+                                {/* Background Image */}
+                                <img
+                                    src={location.image}
+                                    alt={`Oficina en ${location.name}`}
+                                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                                />
+
+                                {/* Overlay Gradient (Default) */}
+                                <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 opacity-90 transition-opacity duration-300 md:group-hover:opacity-0 ${isActive ? 'opacity-0' : ''}`}></div>
+
+                                {/* Content Drawer */}
+                                <div
+                                    className={`absolute inset-x-0 bottom-0 p-6 bg-brand-surface/95 backdrop-blur-md transition-transform duration-500 ease-in-out border-t-4 border-brand-accent
+                                    ${isActive ? 'translate-y-0' : 'translate-y-[calc(100%-88px)]'}
+                                    md:group-hover:translate-y-0`}
+                                >
+                                    {/* Visible Header Area */}
+                                    <div
+                                        className="flex items-center justify-between mb-4 cursor-pointer"
+                                        onClick={() => toggleLocation(location.id)}
+                                    >
+                                        <div>
+                                            <div className="flex items-center space-x-2 text-brand-accent mb-1">
+                                                <FontAwesomeIcon icon={faMapMarkerAlt} className="h-4 w-4" />
+                                                <span className="text-xs font-bold uppercase tracking-widest">Sede</span>
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-white tracking-tight leading-none">{location.name}</h3>
+                                        </div>
+                                        {/* Hint Icon (Arrow) */}
+                                        <div
+                                            className={`text-white/50 transition-all duration-300 transform 
+                                            md:group-hover:text-brand-accent md:group-hover:rotate-90
+                                            ${isActive ? 'text-brand-accent rotate-90' : ''}`}
+                                        >
+                                            <FontAwesomeIcon icon={faArrowRight} className="h-5 w-5" />
+                                        </div>
+                                    </div>
+
+                                    {/* Hidden Details (Revealed on Hover or Click) */}
+                                    <div className={`space-y-2 transition-opacity duration-500 delay-100
+                                        ${isActive ? 'opacity-100' : 'opacity-0'}
+                                        md:group-hover:opacity-100`}
+                                    >
+                                        <div className="w-12 h-0.5 bg-brand-accent/50 mb-2"></div>
+
+                                        {location.address && (
+                                            <a
+                                                href={location.mapsUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-start text-gray-300 text-sm group/item hover:text-white transition-colors cursor-pointer"
+                                            >
+                                                <FontAwesomeIcon icon={faMapMarkerAlt} className="h-4 w-4 mr-3 mt-0.5 text-brand-primary shrink-0 group-hover/item:text-white transition-colors" />
+                                                <span className="leading-snug">{location.address}</span>
+                                            </a>
+                                        )}
+                                        {location.phone && (
+                                            <div className="flex items-center text-gray-300 text-sm group/item hover:text-white transition-colors">
+                                                <FontAwesomeIcon icon={faPhone} className="h-4 w-4 mr-3 text-brand-primary shrink-0" />
+                                                <span>{location.phone}</span>
+                                            </div>
+                                        )}
+                                        {location.email && (
+                                            <div className="flex items-center text-gray-300 text-sm group/item hover:text-white transition-colors break-all">
+                                                <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 mr-3 text-brand-primary shrink-0" />
+                                                <span>{location.email}</span>
+                                            </div>
+                                        )}
+
+                                        {location.whatsapp && (
+                                            <div className="pt-4">
+                                                <a
+                                                    href={`https://wa.me/${location.whatsapp}?text=${encodeURIComponent(`Hola, deseo realizar una consulta sobre los servicios de Minares South`)}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-900/20 active:scale-95 text-sm"
+                                                >
+                                                    <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4" />
+                                                    <span>Consultar a WhatsApp</span>
+                                                </a>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default LocationsSection;

@@ -1,0 +1,42 @@
+---
+/**
+ * Página de Inicio (Home).
+ * Punto de entrada principal que presenta el slider de servicios, grid de servicios,
+ * testimonios, clientes y socios.
+ */
+import Layout from "../layouts/Layout.astro";
+import ServicesSlider from "../components/ServicesSlider";
+import ServicesGrid from "../components/ServicesGrid";
+import LocationsSection from "../components/LocationsSection";
+import Testimonials from "../components/Testimonials";
+import Clients from "../components/Clients";
+import Partners from "../components/Partners";
+---
+
+<Layout title="Minares South - Inicio">
+	<main>
+		<ServicesSlider client:load />
+
+		<section class="relative bg-white overflow-hidden py-24">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="text-center mb-16">
+					<h2
+						class="text-3xl font-extrabold text-gray-900 sm:text-4xl uppercase tracking-tight"
+					>
+						Nuestros Servicios
+					</h2>
+					<p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+						Ofrecemos una amplia gama de análisis de laboratorio y
+						servicios metalúrgicos.
+					</p>
+				</div>
+				<ServicesGrid />
+			</div>
+		</section>
+
+		<LocationsSection client:visible />
+		<Testimonials client:visible />
+		<Clients client:visible />
+		<Partners client:visible />
+	</main>
+</Layout>
