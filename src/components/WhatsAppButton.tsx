@@ -7,8 +7,8 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
  * Acceso rápido para consultas directas con un mensaje preconfigurado.
  */
 const WhatsAppButton = () => {
-    const phoneNumber = "51967605686";
-    const message = encodeURIComponent("Hola, deseo realizar una consulta sobre los servicios de Minares South");
+    const phoneNumber = "51977701075";
+    const message = encodeURIComponent("Hola, deseo realizar una consulta sobre los servicios de LAPSUS");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (

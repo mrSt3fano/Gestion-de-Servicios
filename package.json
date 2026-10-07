@@ -1,5 +1,5 @@
 {
-  "name": "minaressouth",
+  "name": "lapsus",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/node": "^11.1.7",
+    "@astrojs/react": "^7.0.1",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
@@ -17,9 +18,13 @@
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.17.2",
+    "astro": "^7.3.6",
+    "nodemailer": "^10.0.16",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^8.0.2"
   }
 }

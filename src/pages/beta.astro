@@ -1,0 +1,186 @@
+---
+/**
+- Página Únete a la Beta (Productos/Registro).
+- Formulario e información del programa Beta Founder para primeros clientes.
+ */
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Únete a la Beta | Lapsus">
+    <!-- Hero Header ajustado para Navbar transparente -->
+    <div class="relative bg-brand-surface pt-40 pb-20 overflow-hidden -mt-20">
+        {/* Background Image with Overlay */}
+        <div class="absolute inset-0 z-0">
+            <img
+                src="/images/gestion_negocios.png"
+                alt="Fondo Beta"
+                class="w-full h-full object-cover opacity-50 mix-blend-luminosity transform scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-surface via-brand-surface/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand-surface/40"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-sm">
+                <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></div>
+                <span class="text-white font-bold uppercase tracking-[0.2em] text-[10px]">
+                    Programa LAPSUS Beta
+                </span>
+            </div>
+            
+            <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl uppercase fuente-titulos">
+                Únete a la Beta
+            </h1>
+            
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300 font-medium leading-relaxed">
+                Sé uno de los primeros en transformar su negocio y obtén otros beneficios exclusivos.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="bg-white">
+        <section class="relative bg-white overflow-hidden py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    
+                    <!-- Columna Izquierda: Beneficios -->
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4 fuente-titulos">
+                                Beneficios Exclusivos
+                            </h2>
+                            <p class="text-lg text-gray-600">
+                                Al unirte a la Beta, serás parte fundamental de las mejoras futuras para Lapsus y disfrutarás de próximos descuentos.
+                            </p>
+                        </div>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-brand-primary flex items-center justify-center text-cyan-400 shadow-md">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold text-gray-900">Precio Especial de Por Vida</h3>
+                                    <p class="mt-1 text-gray-600">Garantiza un descuento permanente en tu suscripción cuando lancemos la versión oficial.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-brand-primary flex items-center justify-center text-cyan-400 shadow-md">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold text-gray-900">Soporte Prioritario</h3>
+                                    <p class="mt-1 text-gray-600">Atención personalizada y comunicación directa con nuestro equipo de ingeniería.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-brand-primary flex items-center justify-center text-cyan-400 shadow-md">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold text-gray-900">Influencia en el Producto</h3>
+                                    <p class="mt-1 text-gray-600">Tus sugerencias tendrán máxima prioridad para añadir nuevas funcionalidades al sistema.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna Derecha: Formulario -->
+                    <div class="bg-gray-50 rounded-2xl p-8 shadow-xl border border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 fuente-titulos">Solicitar Acceso</h3>
+                        
+                        <!-- AÑADÍ EL ID "beta-form" AQUÍ -->
+                        <form id="beta-form" class="space-y-5">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary sm:text-sm p-3 border outline-none transition-colors" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            
+                            <div>
+                                <label for="empresa" class="block text-sm font-medium text-gray-700 mb-1">Nombre del Negocio</label>
+                                <input type="text" id="empresa" name="empresa" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary sm:text-sm p-3 border outline-none transition-colors" placeholder="Ej. Mi Negocio" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary sm:text-sm p-3 border outline-none transition-colors" placeholder="correo@empresa.com" required>
+                            </div>
+                            
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">WhatsApp / Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary sm:text-sm p-3 border outline-none transition-colors" placeholder="+51 999 999 999" required>
+                            </div>
+                            
+                            <div class="pt-4">
+                                <!-- AÑADÍ EL ID "submit-btn" AQUÍ -->
+                                <button type="submit" id="submit-btn" class="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl shadow-sm text-base font-bold text-slate-900 bg-cyan-400 hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 transition-colors disabled:opacity-50">
+                                    Enviar Solicitud
+                                </button>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-primary/10 text-brand-primary">
+                                    Cupos limitados
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<!-- SCRIPT PARA ENVIAR DATOS AL BACKEND -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('beta-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        // Validación nativa: Garantiza al editor que son un formulario y un botón
+        if (form instanceof HTMLFormElement && submitBtn instanceof HTMLButtonElement) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Enviando...';
+                submitBtn.disabled = true; // Ya no marcará error aquí
+
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+
+                try {
+                    const response = await fetch('/api/contacto', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data),
+                    });
+
+                    if (response.ok) {
+                        alert('¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.');
+                        form.reset(); // Ya no marcará error aquí
+                    } else {
+                        alert('Hubo un error al enviar la solicitud.');
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert('Error de conexión. Revisa tu internet.');
+                } finally {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false; // Ya no marcará error aquí
+                }
+            });
+        }
+    });
+</script>

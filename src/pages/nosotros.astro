@@ -1,14 +1,9 @@
 ---
-/**
- * Página "Nosotros".
- * Muestra información sobre la historia de la empresa, su visión, misión y valores.
- */
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Nosotros | LabMiners">
-    <div class="relative bg-brand-surface py-20 overflow-hidden">
-        {/* Background Image with Overlay */}
+<Layout title="Nosotros | LAPSUSLab">
+    <div class="relative bg-brand-surface pt-40 pb-20 overflow-hidden -mt-20">
         <div class="absolute inset-0 z-0">
             <img
                 src="/images/via_seca.png"
@@ -55,9 +50,7 @@ import Layout from "../layouts/Layout.astro";
             <div
                 class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24"
             >
-                <!-- Section 1: Sobre Minares (Layout matches ServicesList Item) -->
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <!-- Image Side -->
                     <div class="w-full lg:w-1/2">
                         <div
                             class="relative rounded-2xl overflow-hidden shadow-2xl group"
@@ -67,14 +60,13 @@ import Layout from "../layouts/Layout.astro";
                             >
                             </div>
                             <img
-                                src="/images/nosotros1.jpg"
-                                alt="Equipo Minares"
+                                src="/images/nosotros1.jpeg"
+                                alt="Lapsus"
                                 class="w-full h-80 lg:h-[28rem] object-cover transform transition-transform duration-700 group-hover:scale-105"
                             />
                         </div>
                     </div>
 
-                    <!-- Content Side -->
                     <div class="w-full lg:w-1/2 space-y-6">
                         <div class="flex items-center space-x-4">
                             <div
@@ -94,33 +86,36 @@ import Layout from "../layouts/Layout.astro";
                                 >
                             </div>
                             <h3 class="text-3xl font-bold text-gray-900">
-                                Sobre Minares
+                                Sobre LAPSUS
                             </h3>
                         </div>
 
                         <p
                             class="text-lg text-gray-600 leading-relaxed text-left"
                         >
-                            En Minares, nos dedicamos a proporcionar soluciones
-                            mineras integrales de alta calidad. Con años de
-                            experiencia en la industria, nuestro equipo de
-                            expertos está comprometido con la excelencia y la
-                            innovación.
+                            LAPSUS es un sistema diseñado para que los negocios
+                            usen la tecnología como parte de sus operaciones
+                            diarias.
                         </p>
                         <p
                             class="text-lg text-gray-600 leading-relaxed text-left"
                         >
-                            Nuestra misión es optimizar las operaciones mineras
-                            de nuestros clientes, mejorando la eficiencia y la
-                            seguridad en cada proyecto que emprendemos.
-                            Trabajamos con las últimas tecnologías y
-                            metodologías para garantizar resultados
-                            excepcionales en todos nuestros servicios.
+                            LAPSUS te permite gestionar citas, clientes,
+                            negocios, sucursales, servicios; también puedes
+                            asignar personal administrativo y personal operativo
+                            a sus respectivas tareas para asegurar una correcta
+                            trazabilidad del negocio.
+                        </p>
+
+                        <p
+                            class="text-lg text-gray-600 leading-relaxed text-left"
+                        >
+                            Y además puedes ver tus ventas, manejar el
+                            calendario de citas TODO desde un mismo lugar.
                         </p>
                     </div>
                 </div>
 
-                <!-- Section 2: Filosofía Empresarial (Cards style matching Features box) -->
                 <div>
                     <div class="text-center mb-12">
                         <h2
@@ -135,7 +130,6 @@ import Layout from "../layouts/Layout.astro";
                     </div>
 
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-                        <!-- Vision -->
                         <div
                             class="bg-gray-50 p-6 md:p-8 rounded-2xl border-t-4 border-brand-primary shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
@@ -168,15 +162,13 @@ import Layout from "../layouts/Layout.astro";
                             <p
                                 class="text-sm md:text-base text-gray-600 leading-relaxed text-left"
                             >
-                                Ser una empresa líder en el Perú, especializada
-                                en brindar apoyo a la industria minera, cuenta
-                                con un moderno laboratorio en Análisis Químico
-                                de Minerales, y ser el aliado estratégico más
-                                importante de nuestros clientes.
+                                Ser la infraestructura digital estándar para el
+                                crecimiento de las empresas que ofrecen
+                                servicios, permitiendo a los negocios escalar
+                                sus operaciones y sucursales.
                             </p>
                         </div>
 
-                        <!-- Mission -->
                         <div
                             class="bg-gray-50 p-6 md:p-8 rounded-2xl border-t-4 border-brand-primary shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
@@ -204,15 +196,12 @@ import Layout from "../layouts/Layout.astro";
                             <p
                                 class="text-sm md:text-base text-gray-600 leading-relaxed text-justify"
                             >
-                                Hacer que nuestros clientes cumplan con sus
-                                objetivos, mediante el concurso de profesionales
-                                de primer nivel, altamente motivados, creativos
-                                e innovadores, ofreciendo las mejores soluciones
-                                en Análisis Químico.
+                                Nuestra misión es optimizar las operaciones de
+                                nuestros clientes y darles el control de su
+                                negocio aplicando la ingeniería de software.
                             </p>
                         </div>
 
-                        <!-- Values -->
                         <div
                             class="bg-gray-50 p-6 md:p-8 rounded-2xl border-t-4 border-brand-primary shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
@@ -242,11 +231,10 @@ import Layout from "../layouts/Layout.astro";
                             >
                                 {
                                     [
-                                        "Capacidad",
+                                        "Confianza",
                                         "Responsabilidad",
-                                        "Dedicación",
                                         "Honestidad",
-                                        "Respeto",
+                                        "Innovación",
                                     ].map((value) => (
                                         <li class="flex items-center text-gray-600">
                                             <svg

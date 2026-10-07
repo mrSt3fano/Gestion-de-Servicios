@@ -5,57 +5,57 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const services = [
     {
         id: 1,
-        title: "PREPARACIÓN MECÁNICA",
-        subtitle: "(MUESTRAS MINEROLÓGICAS)",
-        description: "Preparación mecánica de muestras de minerales, concentrados, relaves y pulpas mediante trituración, pulverización, cuarteo y control granulométrico",
-        image: "/images/preparacion_muestras.png",
-        link: "/servicios#preparacion-mecanica"
+        title: "MIS NEGOCIOS",
+        subtitle: "(SUCURSALES Y CONFIGURACIÓN)",
+        description: "Administra uno o varios negocios desde un solo panel: datos básicos, horario de atención, sucursales, servicios y precios.",
+        image: "/images/gestion_negocios.png",
+        link: "/servicios#mis-negocios"
     },
     {
         id: 2,
-        title: "VIA SECA",
-        subtitle: "(FUNDICIÓN)",
-        description: "Análisis de oro y plata mediante ensayo al fuego (Fire Assay) con alta precisión y estándares internacionales.",
-        image: "/images/via_seca.jpg",
-        link: "/servicios#via-seca"
+        title: "CALENDARIO",
+        subtitle: "(VISTA DÍA Y SEMANA)",
+        description: "Visualiza todas las citas próximas filtradas por sucursal o por staff, con estados claros: confirmada, en curso, completada o no-show.",
+        image: "/images/calendario_citas.png",
+        link: "/servicios#calendario"
     },
     {
         id: 3,
-        title: "VIA HÚMEDA - VOLUMETRIA",
-        subtitle: "(METODOS VOLUMETRICOS)",
-        description: "Ensayos para concentrados de cobre, plomo y zinc, con determinación de elementos de alta ley y resultados confiables para el control de calidad.",
-        image: "/images/via_humeda.jpg",
-        link: "/servicios#via-humeda"
+        title: "RESERVAR Y ADMINISTRAR",
+        subtitle: "(GESTIÓN DE CITAS)",
+        description: "Crea citas manualmente desde el panel o deja que tus clientes reserven solos, siempre mostrando solo los horarios realmente disponibles.",
+        image: "/images/reserva_citas.png",
+        link: "/servicios#citas"
     },
     {
         id: 4,
-        title: "ENSAYOS POR INSTRUMENTACIÓN",
-        subtitle: "(ABSORCIÓN ATÓMICA)",
-        description: "Ensayos por instrumentación con Absorción Atómica, ICP-OES y UV-VIS para análisis multielemental de minerales, concentrados, muestras geoquímicas y soluciones.",
-        image: "/images/absorcion_atomica.jpg",
-        link: "/servicios#area-instrumental"
+        title: "GESTIÓN DE STAFF",
+        subtitle: "(SERVICIOS POR COLABORADOR)",
+        description: "Asigna qué servicios puede realizar cada colaborador, define su disponibilidad propia y controla negocios generalistas o especializados.",
+        image: "/images/gestion_staff.png",
+        link: "/servicios#staff"
     },
     {
         id: 5,
-        title: "PRUEBAS METALÚRGICAS",
-        subtitle: "(INVESTIGACIONES)",
-        description: "Pruebas metalúrgicas de flotación, cianuración, gravimetría y Falcon para optimizar la recuperación de oro, cobre y minerales polimetálicos.",
-        image: "/images/pruebas_metalurgicas1.png",
-        link: "/servicios#pruebas-metalurgicas"
+        title: "PRIORIDAD AUTOMÁTICA",
+        subtitle: "(EMERGENCIAS Y REORDENAMIENTO)",
+        description: "El sistema reordena la agenda automáticamente ante emergencias o tardanzas, y notifica a los clientes afectados sin intervención manual.",
+        image: "/images/prioridad_automatica.png",
+        link: "/servicios#prioridad"
     },
     {
         id: 6,
-        title: "CONSULTORIA",
-        subtitle: "(ASESORIA TÉCNICA)",
-        description: "Obten consultoría para desarrollo de software a la medida, soporte técnico, alquiler de servicios.",
-        image: "/images/consultoria.jpg",
-        link: "/servicios#consultoria-asesoria"
+        title: "BOT DE WHATSAPP",
+        subtitle: "(CANAL INFORMATIVO Y RESERVA)",
+        description: "Resuelve dudas de tus clientes sobre servicios y precios, y permite agendar citas directamente desde WhatsApp, sin salir de la conversación.",
+        image: "/images/bot_whatsapp.png",
+        link: "/servicios#whatsapp"
     }
 ];
 
 /**
- * Componente que muestra los servicios principales en una cuadrícula.
- * Cada servicio incluye una imagen con efectos visuales técnicos y un enlace a detalles.
+ * Componente que muestra los módulos principales del sistema en una cuadrícula.
+ * Cada módulo incluye una imagen con efectos visuales técnicos y un enlace a detalles.
  */
 const ServicesGrid = () => {
     return (
@@ -73,7 +73,7 @@ const ServicesGrid = () => {
 
                         {/* Technical Metadata */}
                         <div className="absolute top-4 right-4 text-[8px] font-bold text-white/40 tracking-[0.2em] font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                            SRV_CODE: {service.id}00X
+                            MOD_CODE: {service.id}00X
                         </div>
                         <div className="absolute bottom-4 left-4 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                             <div className="w-1 h-1 bg-brand-primary"></div>
