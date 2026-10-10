@@ -18,7 +18,7 @@ const Footer = () => {
 
                     {/* Column 1: Company Info */}
                     <div className="flex flex-col items-center">
-                        <h3 className="text-white text-xl font-bold mb-4">LAPSUS</h3>
+                        <h3 className="text-white text-xl font-bold mb-4">LOBIA</h3>
                         <p className="text-sm leading-relaxed mb-6 text-gray-400 max-w-sm">
                             Soluciones para todo negocio que necesita tener el control
                             de su información usando la tecnología en sus negocios.
@@ -82,7 +82,7 @@ const Footer = () => {
             <div className="border-t border-gray-800 bg-black/20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-center">
                     <p className="text-sm text-gray-500 mb-4 md:mb-0">
-                        &copy; {currentYear} LAPSUS. Todos los derechos reservados.
+                        &copy; {currentYear} LOBIA. Todos los derechos reservados.
                     </p>
                     <div className="flex space-x-6 justify-center">
                         <a href="/politica-de-privacidad" className="text-sm text-gray-500 hover:text-white transition-colors">Privacidad</a>

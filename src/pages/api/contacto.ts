@@ -23,7 +23,7 @@ export const POST: APIRoute = async ({ request }) => {
     const mailOptions = {
       from: import.meta.env.MAIL_USERNAME, 
       to: import.meta.env.MAIL_USERNAME, // Te lo envías a ti mismo
-      subject: `Nueva solicitud Beta Lapsus - ${empresa}`,
+      subject: `Nueva solicitud Beta Lobia - ${empresa}`,
       html: `
         <h2>Nuevo registro para el programa Beta</h2>
         <ul>

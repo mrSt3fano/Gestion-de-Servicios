@@ -35,8 +35,8 @@ const Navbar = ({ pathname = '/' }: NavbarProps) => {
                     <div className="flex-1 flex justify-start items-center">
                         <a href="/" className="flex items-center">
                             <img 
-                                src="/images/logo2.png" 
-                                alt="Logo LAPSUS TEC" 
+                                src="/images/lobia1.png" 
+                                alt="Logo LOBIA TEC" 
                                 className="h-30 w-auto object-contain"
                                 onError={(e) => {
                                     /* Texto de respaldo por si la imagen no carga */
@@ -44,7 +44,7 @@ const Navbar = ({ pathname = '/' }: NavbarProps) => {
                                     (e.target as HTMLElement).nextElementSibling?.classList.remove('hidden');
                                 }}
                             />
-                            <span className="hidden fuente-titulos uppercase tracking-widest font-bold text-xl">LAPSUS TEC</span>
+                            <span className="hidden fuente-titulos uppercase tracking-widest font-bold text-xl">LOBIA TEC</span>
                         </a>
                     </div>
 

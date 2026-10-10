@@ -8,7 +8,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
  */
 const WhatsAppButton = () => {
     const phoneNumber = "51977701075";
-    const message = encodeURIComponent("Hola, deseo realizar una consulta sobre los servicios de LAPSUS");
+    const message = encodeURIComponent("Hola, deseo realizar una consulta sobre los servicios de LOBIA");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (
