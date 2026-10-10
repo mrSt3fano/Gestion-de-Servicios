@@ -80,7 +80,7 @@ const ServicesSlider = () => {
                                     <div className="animate-fade-in-up">
                                         {index === 0 ? (
                                             <>
-                                                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 tracking-tight leading-tight">
+                                                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-tight">
                                                     EL SISTEMA DE CITAS QUE SE ADAPTA <br className="hidden md:block"/>
                                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
                                                         A TU NEGOCIO

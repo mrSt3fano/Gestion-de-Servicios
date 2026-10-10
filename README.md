@@ -1,8 +1,8 @@
-# Proyecto Minares South - Laboratorio Químico Metalúrgico
+# Proyecto Lobia - Soluciones de Software
 
-Sitio web oficial de **Minares South**, desarrollado con **Astro** y **React**.
+Sitio web oficial de **Lobia**, desarrollado con **Astro** y **React**.
 
-## 🚀 Estructura del Proyecto
+## Estructura del Proyecto
 
 Dentro del proyecto, encontrarás las siguientes carpetas y archivos principales:
 
@@ -33,5 +33,5 @@ Todos los comandos deben ejecutarse desde la raíz del proyecto en una terminal:
 
 ## ⚖️ Créditos
 
-- **Autor Técnico:** Rubén Tipiani (Metadatos y SEO)
-- **Desarrollado para:** Minares South S.R.L.
+- **Autor Técnico:** Stefano Soto
+- **Desarrollado para:** Lobia

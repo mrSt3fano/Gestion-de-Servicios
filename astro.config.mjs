@@ -6,7 +6,8 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server', // <-- Esta es la línea clave
+  site: 'https://lobia.pe', // <-- Añade esta línea estrictamente
+  output: 'server',
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()]
