@@ -19,5 +19,5 @@ jobs:
             cd /var/www/Gestion-de-Servicios
             git pull origin main
             npm install
-            npm run main
+            npm run build
             pm2 restart lobia-web
