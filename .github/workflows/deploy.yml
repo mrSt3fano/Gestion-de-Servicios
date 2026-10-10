@@ -1,33 +1,23 @@
-name: Deploy Website
+name: Deploy to DigitalOcean Droplet
 
 on:
   push:
     branches:
-      - main  # Se activa cada vez que subas cambios a la rama main
+      - main  # Se activa al hacer push en tu rama actual
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Checkout (Obtener código)
-        uses: actions/checkout@v4
-
-      - name: ⚙️ Setup Node.js
-        uses: actions/setup-node@v4
+      - name: 🚀 Deploy and Restart PM2
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          node-version: 20
-
-      - name: 📦 Install dependencies
-        run: npm install
-
-      - name: 🏗️ Build Project
-        run: npm run build
-
-      - name: 🚀 Deploy to SiteGround via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/      # Carpeta que genera Astro
-          server-dir: /  # Ruta en SiteGround donde quieres los archivos
+          host: ${{ secrets.DROPLET_IP }}
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          script: |
+            cd /var/www/Gestion-de-Servicios
+            git pull origin build
+            npm install
+            npm run build
+            pm2 restart lobia-web
